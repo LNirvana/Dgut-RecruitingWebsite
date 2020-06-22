@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-bean/Dgut-RecruitingWebsite-bean.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-bean/Dgut-RecruitingWebsite-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-common/Dgut-RecruitingWebsite-common.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-common/Dgut-RecruitingWebsite-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-api/Dgut-RecruitingWebsite-manager-api.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-api/Dgut-RecruitingWebsite-manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-impl/Dgut-RecruitingWebsite-manager-impl.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-impl/Dgut-RecruitingWebsite-manager-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-parent/Dgut-RecruitingWebsite-parent.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-parent/Dgut-RecruitingWebsite-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-api/Dgut-RecruitingWebsite-potal-api.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-api/Dgut-RecruitingWebsite-potal-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-impl/Dgut-RecruitingWebsite-potal-impl.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-impl/Dgut-RecruitingWebsite-potal-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-web/Dgut-RecruitingWebsite-web.iml" filepath="$PROJECT_DIR$/Dgut-RecruitingWebsite-web/Dgut-RecruitingWebsite-web.iml" />
+    </modules>
+  </component>
+</project>

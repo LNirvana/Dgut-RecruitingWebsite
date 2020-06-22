@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5"><!--用的是2.5的规范-->
+
+    <display-name>dgutrecruitingwebsite</display-name>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring/spring-*.xml</param-value>
+    <!--路径下其他的jar文件都被打包成jar包参与进来-->
+    </context-param>
+
+    <!--配置监听器=》
+        创建Spring框架的IOC容器。创建完后讲IOC容器对象存放到application域中，
+        取出的时候使用getWebApplicationContext（）方法来将其取出，
+        ApplicationContext ioc = webApplicationContext.getWebApplicationContext(applicationContext);
+        ioc容器拿到了，里面所有的bean对象去哪个都ok
+
+        ServletContextListener监听器接口：
+            监听ServletContext的创建和销毁，
+                如果监听到ServletContext创建（服务器启动），就会创建IOC容器。（XMLWebApplicationContext）
+                如果监听到ServletContext销毁（服务器停止，或卸载项目），就会销毁IOC销毁。
+     -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- 字符编码过滤器
+    Filter里面有三个方法，doFilter请求通过过滤器的时候会进行过滤，
+    CharacterEncodingFilter设置字符集，只能解决POST的乱码问题，不能解决GET的乱码问题。
+    GET请求就是：链接发过来的请求或者地址栏里边发过来的请求，里面有中文是无法解决的。
+    字符编码过滤器对服务器内部的请求转发不过滤，第一个Servlet执行完以后转发到第二个Servletl里面
+    这时候不会再进行过滤了，因为过滤器已经完成了请求的目的。
+    -->
+    <filter>
+        <filter-name>encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+        <!--过滤的请求规则
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+        -->
+    </filter-mapping>
+
+    <!--第二个过滤器，Http过滤器,支持RESTful风格，将POST请求转换为PUT或DELETE请求
+    会读取隐含的参数：“_methond”
+    -->
+    <filter>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <servlet-name>springmvc</servlet-name>
+        <!--主要是看mvc的servlet请求，扩展请求一定优于/*的执行顺序-->
+    </filter-mapping>
+
+
+
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--涉及了反射机制-->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/springmvc-context.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <!--Servlet生命周期，对象如何被创建出来的，就是说服务器在一启动的时候，Tomcat要加载这个web.xml中的配置
+        所以默认情况下是第一次访问的时候就会创建这个对象，所以Servlet是单例的，但现在Servlet是一个核心控制器
+        但现在配置好以后，在服务器一加载的时候，就把这个对象直接给创建出来了，大于等于0的值，值越小，优先级越高。
+        在这里指定1，主要是担心以后还有一个Servlet优先级要设置高的话，就留有余地了。
+        -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <!--URL:http://location:8080/contexPath/order/save.do-->
+        <!--扩展匹配-->
+        <url-pattern>*.htm</url-pattern>
+        <url-pattern>*.do</url-pattern>
+        <!--精确匹配  -->
+        <url-pattern>/user/save</url-pattern>
+        <!--路径匹配
+        <url-pattern>/user/*</url-pattern>
+        <url-pattern>/*</url-pattern>
+        -->
+        <!--默认匹配-->
+        <url-pattern>/</url-pattern>
+
+    </servlet-mapping>
+
+    <!-- 会话超时时间 -->
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

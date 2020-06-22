@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-bean/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-bean/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-manager-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-potal-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dgut-RecruitingWebsite-web/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

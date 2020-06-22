@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Dgut-RecruitingWebsite-web:war">
+    <output-path>$PROJECT_DIR$/Dgut-RecruitingWebsite-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Dgut-RecruitingWebsite-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Dgut-RecruitingWebsite-web.war">
+      <element id="artifact" artifact-name="Dgut-RecruitingWebsite-web:war exploded" />
+    </root>
+  </artifact>
+</component>

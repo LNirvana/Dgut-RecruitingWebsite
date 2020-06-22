@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Dgut-RecruitingWebsite-web" />
+        <module name="Dgut-RecruitingWebsite-bean" />
+        <module name="Dgut-RecruitingWebsite-potal-api" />
+        <module name="Dgut-RecruitingWebsite-potal-impl" />
+        <module name="Dgut-RecruitingWebsite-common" />
+        <module name="Dgut-RecruitingWebsite-manager-impl" />
+        <module name="Dgut-RecruitingWebsite-manager-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Dgut-RecruitingWebsite-bean" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-common" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-manager-api" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-manager-impl" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-parent" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-potal-api" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-potal-impl" target="1.7" />
+      <module name="Dgut-RecruitingWebsite-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
